@@ -6,7 +6,10 @@ const ejs = require("ejs");
 const _ = require("lodash");
 const mongoose = require("mongoose");
 
-mongoose.connect('mongodb://localhost:27017/myblog', { useNewUrlParser: true, useUnifiedTopology: true });
+mongoose.connect('mongodb+srv://suraj_admin:suraj@cluster0.dx701.mongodb.net/myblog', { useNewUrlParser: true, useUnifiedTopology: true })
+.then(() =>console.log("connection successfull"))
+.catch((err) => console.log(err))
+;
 
 const blogSchema = {
   title: String,
